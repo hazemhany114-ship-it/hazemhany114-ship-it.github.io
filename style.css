@@ -343,3 +343,242 @@ body {
         width: min(390px, 90vw);
     }
 }
+
+/* =================================
+   General Sections
+================================= */
+
+.section {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.section:nth-of-type(even) {
+    background: #ffffff;
+}
+
+.section-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-label {
+    margin-bottom: 8px;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+/* =================================
+   About Section
+================================= */
+
+.about-content {
+    max-width: 900px;
+}
+
+.about-content p {
+    margin-bottom: 22px;
+    color: #475569;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-content strong {
+    color: #0f172a;
+}
+
+
+/* =================================
+   Education Section
+================================= */
+
+.education-card {
+    max-width: 850px;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.education-card h3 {
+    margin: 0 0 10px;
+    color: #0f172a;
+    font-size: 25px;
+}
+
+.education-degree {
+    margin-bottom: 25px;
+    color: #64748b;
+    font-size: 17px;
+}
+
+.education-details p {
+    margin: 10px 0;
+    color: #475569;
+    font-size: 16px;
+}
+
+.education-details strong {
+    color: #0f172a;
+}
+
+
+/* =================================
+   Skills Section
+================================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.skill-card h3 {
+    margin: 0 0 20px;
+    color: #0f172a;
+    font-size: 20px;
+}
+
+.skill-card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.skill-card li {
+    margin-bottom: 10px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   Experience Section
+================================= */
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.experience-card {
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.experience-header h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 22px;
+}
+
+.experience-header span {
+    color: #2563eb;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.experience-role {
+    margin: 8px 0 20px;
+    color: #64748b;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.experience-card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-card li {
+    margin-bottom: 12px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.experience-card strong {
+    color: #0f172a;
+}
+
+
+/* =================================
+   Responsive Design
+================================= */
+
+@media (max-width: 850px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-header h2 {
+        font-size: 30px;
+    }
+
+    .experience-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .section-container {
+        width: 88%;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .education-card,
+    .skill-card,
+    .experience-card {
+        padding: 25px;
+    }
+}
