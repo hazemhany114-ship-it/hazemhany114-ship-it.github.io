@@ -659,3 +659,173 @@ body {
     }
 
 }
+/* =================================
+   Projects Section
+================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+
+/* Project Image */
+
+.project-image {
+    width: 100%;
+    height: 260px;
+
+    overflow: hidden;
+
+    background: #f1f5f9;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.03);
+}
+
+
+/* Project Content */
+
+.project-content {
+    padding: 30px;
+}
+
+.project-number {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.project-content h3 {
+    margin: 0 0 15px;
+
+    color: #0f172a;
+
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+.project-content p {
+    margin: 0 0 22px;
+
+    color: #475569;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Project Tools */
+
+.project-tools {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.project-tools span {
+    padding: 7px 11px;
+
+    background: #eff6ff;
+
+    border-radius: 6px;
+
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* Project Link */
+
+.project-link {
+    display: inline-block;
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    color: #1d4ed8;
+
+    transform: translateX(3px);
+}
+
+
+/* =================================
+   Projects Responsive
+================================= */
+
+@media (max-width: 850px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .project-image {
+        height: 220px;
+    }
+
+    .project-content {
+        padding: 25px;
+    }
+
+    .project-content h3 {
+        font-size: 21px;
+    }
+
+}
