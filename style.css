@@ -184,133 +184,40 @@ body {
 
 
 /* ==============================
-   Analytics Visual
+   Profile Photo
 ================================= */
 
 .cover-visual {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.analytics-card {
-    width: 390px;
+.profile-photo-wrapper {
+    width: 350px;
+    height: 350px;
 
-    background: white;
+    padding: 8px;
+
+    background: #ffffff;
 
     border: 1px solid #e2e8f0;
-
-    border-radius: 18px;
-
-    padding: 28px;
+    border-radius: 50%;
 
     box-shadow:
-        0 25px 60px rgba(15, 23, 42, 0.10);
+        0 25px 60px rgba(15, 23, 42, 0.12);
 }
 
-.card-header {
-    display: flex;
-    justify-content: space-between;
+.profile-photo {
+    width: 100%;
+    height: 100%;
 
-    font-size: 14px;
-    font-weight: 600;
+    display: block;
 
-    color: #334155;
+    object-fit: cover;
 
-    margin-bottom: 30px;
+    border-radius: 50%;
 }
-
-.status {
-    color: #22c55e;
-}
-
-
-/* ==============================
-   Fake Analytics Chart
-================================= */
-
-.chart {
-    height: 190px;
-
-    display: flex;
-    align-items: flex-end;
-
-    gap: 12px;
-
-    padding: 20px 10px;
-
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.bar {
-    flex: 1;
-
-    background: #2563eb;
-
-    border-radius: 5px 5px 0 0;
-
-    opacity: 0.85;
-}
-
-.bar-1 {
-    height: 45%;
-}
-
-.bar-2 {
-    height: 65%;
-}
-
-.bar-3 {
-    height: 52%;
-}
-
-.bar-4 {
-    height: 78%;
-}
-
-.bar-5 {
-    height: 70%;
-}
-
-.bar-6 {
-    height: 92%;
-}
-
-
-/* ==============================
-   Analytics Stats
-================================= */
-
-.analytics-stats {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
-
-    margin-top: 25px;
-}
-
-.analytics-stats div {
-    display: flex;
-    flex-direction: column;
-
-    gap: 7px;
-}
-
-.analytics-stats span {
-    font-size: 12px;
-    color: #94a3b8;
-}
-
-.analytics-stats strong {
-    font-size: 20px;
-    color: #0f172a;
-}
-
-
-/* ==============================
-   Responsive Design
-================================= */
 
 @media (max-width: 850px) {
 
@@ -340,12 +247,15 @@ body {
     .cover-visual {
         order: 2;
     }
-
-    .analytics-card {
-        width: min(390px, 90vw);
-    }
 }
 
+@media (max-width: 600px) {
+
+    .profile-photo-wrapper {
+        width: 260px;
+        height: 260px;
+    }
+}
 /* =================================
    General Sections
 ================================= */
