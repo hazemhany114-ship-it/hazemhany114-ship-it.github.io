@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Superstore Data Analysis | Hazem Taha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Hazem Taha</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#education">Education</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <div class="project-page-container">
+            <p class="section-label">Project 04 · Python & Exploratory Data Analysis</p>
+            <h1>Python Superstore — Data Cleaning & Exploratory Data Analysis</h1>
+            <p class="project-hero-description">
+                An end-to-end analysis of the Sample Superstore dataset using Python.
+                The project covers data quality assessment, cleaning, feature
+                engineering, statistical exploration, business KPI analysis, and
+                visual investigation of sales and profitability.
+            </p>
+            <div class="project-page-tools">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
+                <span>Google Colab</span>
+            </div>
+            <div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 18px;">
+                <a class="project-link" href="https://colab.research.google.com/drive/19NQ_hoWW10FBP9a-Np89Nvma6rzvG3se?usp=drive_link" target="_blank" rel="noopener noreferrer">Open Google Colab Notebook →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Overview</p>
+                <h2>Project Overview</h2>
+            </div>
+            <div class="project-overview-grid">
+                <div class="project-info-card">
+                    <h3>Objective</h3>
+                    <p>
+                        Prepare the raw Superstore data for reliable analysis, explore
+                        performance across products, regions, customer segments, and
+                        time, and identify patterns related to profitability,
+                        discounting, and shipping.
+                    </p>
+                </div>
+                <div class="project-info-card">
+                    <h3>Dataset</h3>
+                    <p>
+                        Sample Superstore 2019 workbook containing Orders, Returns,
+                        and People sheets. The Orders sheet started with 9,994 rows;
+                        the cleaned analytical dataset contains 9,993 rows after
+                        removing one duplicate transaction record.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section project-section-light">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Workflow</p>
+                <h2>Analysis Process</h2>
+            </div>
+            <div class="project-process">
+                <div class="process-item">
+                    <span>01</span>
+                    <div>
+                        <h3>Data Inspection & Quality Checks</h3>
+                        <p>Reviewed dataset dimensions, data types, missing values, category consistency, and duplicate records. Investigated the missing postal codes and the duplicate transaction before deciding how to handle them.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span>02</span>
+                    <div>
+                        <h3>Data Cleaning & Preparation</h3>
+                        <p>Standardized column names and text values, handled 11 missing postal codes as Unknown, removed one duplicate business record, and converted fields to appropriate data types.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span>03</span>
+                    <div>
+                        <h3>Outlier Investigation</h3>
+                        <p>Used the IQR method to flag unusual Sales, Quantity, Discount, and Profit values. Kept flagged observations in the dataset and investigated extreme gains and losses rather than automatically deleting them.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span>04</span>
+                    <div>
+                        <h3>Feature Engineering & Data Integration</h3>
+                        <p>Created profit margin, shipping duration, year/month/quarter fields, sales and discount bands, and loss indicators. Integrated return information and regional manager data.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span>05</span>
+                    <div>
+                        <h3>Optimization & Validation</h3>
+                        <p>Downcast numeric types and converted suitable text columns to categorical types, reducing DataFrame memory usage from 10.18 MB to 2.07 MB while checking that Sales and Profit totals remained unchanged by optimization.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span>06</span>
+                    <div>
+                        <h3>Exploratory & Business Analysis</h3>
+                        <p>Calculated business KPIs, grouped performance by category, sub-category, region, and discount band, examined yearly and monthly trends, and explored distributions and correlations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Python Analysis</p>
+                <h2>Techniques & Methods</h2>
+            </div>
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>Data Preparation</h3>
+                    <ul>
+                        <li>Missing-value and duplicate analysis</li>
+                        <li>Column-name and text standardization</li>
+                        <li>Date parsing and data-type conversion</li>
+                        <li>IQR-based outlier flagging</li>
+                        <li>Returns and regional-manager merges</li>
+                        <li>Memory optimization with Pandas</li>
+                    </ul>
+                </div>
+                <div class="analysis-card">
+                    <h3>Statistical Exploration</h3>
+                    <ul>
+                        <li>Descriptive statistics</li>
+                        <li>Mean, median, standard deviation</li>
+                        <li>Skewness and kurtosis</li>
+                        <li>Pearson and Spearman correlations</li>
+                        <li>Monthly linear trend and R²</li>
+                        <li>Year-over-year growth and CAGR</li>
+                    </ul>
+                </div>
+                <div class="analysis-card">
+                    <h3>Business Analysis</h3>
+                    <ul>
+                        <li>Sales, profit, and profit margin</li>
+                        <li>Category and sub-category performance</li>
+                        <li>Regional and customer-segment analysis</li>
+                        <li>Discount-band profitability</li>
+                        <li>Shipping duration by ship mode</li>
+                        <li>Returns and loss-making order lines</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section project-section-light">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Results</p>
+                <h2>Key Performance Indicators</h2>
+            </div>
+            <div class="project-overview-grid">
+                <div class="project-info-card">
+                    <h3>Sales & Profitability</h3>
+                    <p><strong>Total Sales:</strong> $2,296,919.49</p>
+                    <p><strong>Total Profit:</strong> $286,409.08</p>
+                    <p><strong>Profit Margin:</strong> 12.47%</p>
+                    <p><strong>Average Order Value:</strong> $458.56</p>
+                </div>
+                <div class="project-info-card">
+                    <h3>Business Activity</h3>
+                    <p><strong>Orders:</strong> 5,009</p>
+                    <p><strong>Customers:</strong> 793</p>
+                    <p><strong>Units Sold:</strong> 37,871</p>
+                    <p><strong>Average Discount:</strong> 15.62%</p>
+                </div>
+                <div class="project-info-card">
+                    <h3>Operations & Returns</h3>
+                    <p><strong>Average Shipping Duration:</strong> 3.96 days</p>
+                    <p><strong>Order Return Rate:</strong> 5.91%</p>
+                    <p><strong>Loss-Making Order Lines:</strong> 18.71%</p>
+                </div>
+                <div class="project-info-card">
+                    <h3>Data Preparation Impact</h3>
+                    <p><strong>Final Rows:</strong> 9,993</p>
+                    <p><strong>Missing Postal Codes:</strong> 11 handled as Unknown</p>
+                    <p><strong>Memory Reduction:</strong> 79.7%</p>
+                    <p><strong>Outlier Rows Removed:</strong> 0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Business Findings</p>
+                <h2>Selected Insights</h2>
+            </div>
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>Category Profitability</h3>
+                    <p>Technology generated the highest category profit ($145,454.95) and a 17.40% margin. Furniture had a much lower 2.49% margin despite generating $741,718.42 in sales.</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Regional Performance</h3>
+                    <p>The West recorded the highest regional sales ($725,457.82) and profit ($108,418.45). Central had the lowest regional margin at 7.92% and the highest loss-making line rate at 31.90%.</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Discount & Profitability</h3>
+                    <p>Orders in the no-discount band generated a 29.51% margin. The 20–40% discount band had a -15.31% margin, while the above-40% band had a -77.40% margin.</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Sub-Category Performance</h3>
+                    <p>Copiers and Paper recorded strong margins of 37.20% and 43.39%, respectively. Tables had a -8.56% margin, while Bookcases and Supplies also recorded negative profit.</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Growth Over Time</h3>
+                    <p>Sales increased from $483,966.13 in 2016 to $733,215.26 in 2019, representing a 14.85% sales CAGR over the period. November 2019 was the strongest sales month in the dataset.</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Shipping & Returns</h3>
+                    <p>Average shipping duration was 3.96 days. The order-level return rate was 5.91%, based on 296 distinct returned orders out of 5,009 orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section project-section-light">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Interpretation</p>
+                <h2>Notes & Analytical Considerations</h2>
+            </div>
+            <div class="project-info-card">
+                <ul>
+                    <li>Outliers were flagged for investigation, not automatically removed, to preserve potentially meaningful high-value sales and profit/loss transactions.</li>
+                    <li>The monthly linear trend had a relatively low R² (0.251 for Sales), so it should be interpreted as a broad directional trend rather than a strong predictive model.</li>
+                    <li>Correlation results describe associations and do not establish causation. Profit margin is a derived measure (Profit divided by Sales), which should be considered when interpreting correlations.</li>
+                    <li>The Python cleaning workflow removed one duplicate transaction with matching business fields but a different Row_ID. The SQL warehouse project retains the original 9,994 source rows, so the two projects have slightly different totals because of this documented data-cleaning decision.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">My Contribution</p>
+                <h2>Development & Learning Approach</h2>
+            </div>
+            <div class="project-info-card">
+                <p>
+                    I worked through the analysis workflow in Google Colab, reviewed
+                    the data-quality decisions, executed and checked the analysis,
+                    and interpreted the resulting KPIs, statistical outputs, and
+                    business findings.
+                </p>
+                <p>
+                    AI assistance was used to explain concepts and generate parts
+                    of the code. I reviewed, ran, and interpreted the work rather
+                    than presenting the code as entirely unaided development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section project-section-light">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Notebook</p>
+                <h2>Explore the Analysis</h2>
+            </div>
+            <div class="project-info-card">
+                <p>The Google Colab notebook contains the Python workflow, calculations, and visual analysis.</p>
+                <p><a class="project-link" href="https://colab.research.google.com/drive/19NQ_hoWW10FBP9a-Np89Nvma6rzvG3se?usp=drive_link" target="_blank" rel="noopener noreferrer">Open the Google Colab Notebook →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-back">
+        <a href="index.html#projects">← Back to Projects</a>
+    </section>
+
+</body>
+</html>
