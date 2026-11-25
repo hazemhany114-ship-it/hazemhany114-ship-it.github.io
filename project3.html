@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL Superstore Data Warehouse | Hazem Taha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Hazem Taha</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#education">Education</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <div class="project-page-container">
+            <p class="section-label">Project 03 · SQL & Data Warehousing</p>
+            <h1>MySQL Superstore Data Warehouse & Business Analytics</h1>
+            <p class="project-hero-description">
+                A hands-on data warehousing project built with MySQL 8.0.
+                The work covers a star-schema design, staging tables, SQL-based
+                ETL, data-quality handling, and business analysis using SQL.
+            </p>
+            <div class="project-page-tools">
+                <span>MySQL 8.0</span>
+                <span>SQL</span>
+                <span>MySQL Workbench</span>
+                <span>Star Schema</span>
+                <span>ETL</span>
+                <span>Data Analysis</span>
+            </div>
+            <div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 18px;">
+                <a class="project-link" href="https://github.com/hazemhany114-ship-it/MySQL-Superstore-Data-Warehouse" target="_blank" rel="noopener noreferrer">View GitHub Repository →</a>
+                <a class="project-link" href="https://github.com/hazemhany114-ship-it/MySQL-Superstore-Data-Warehouse/blob/main/README.md" target="_blank" rel="noopener noreferrer">Read Project Documentation →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Overview</p>
+                <h2>Project Overview</h2>
+            </div>
+            <div class="project-overview-grid">
+                <div class="project-info-card">
+                    <h3>Objective</h3>
+                    <p>
+                        Transform the Sample Superstore dataset into a structured
+                        relational data warehouse and use SQL to investigate sales,
+                        profitability, customer behavior, and product performance.
+                    </p>
+                </div>
+                <div class="project-info-card">
+                    <h3>Dataset</h3>
+                    <p>
+                        The project uses the Sample Superstore Orders and Returns
+                        data. The Orders source contains 9,994 records, while the
+                        Returns source contains 800 rows.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section project-section-light">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Data Architecture</p>
+                <h2>Star Schema Design</h2>
+            </div>
+            <p class="project-hero-description">
+                The warehouse contains eight tables: six dimension tables and
+                two fact tables. The sales fact table is designed at the grain
+                of one product line within an order.
+            </p>
+            <div class="dashboard-image">
+                <a href="https://raw.githubusercontent.com/hazemhany114-ship-it/MySQL-Superstore-Data-Warehouse/main/superstore-erd.png" target="_blank" rel="noopener noreferrer">
+                    <img src="https://raw.githubusercontent.com/hazemhany114-ship-it/MySQL-Superstore-Data-Warehouse/main/superstore-erd.png" alt="Entity Relationship Diagram for the Superstore MySQL data warehouse">
+                </a>
+            </div>
+            <div class="analysis-grid" style="margin-top: 30px;">
+                <div class="analysis-card">
+                    <h3>Dimension Tables</h3>
+                    <ul>
+                        <li>dim_customer — 793 records</li>
+                        <li>dim_product — 1,894 records</li>
+                        <li>dim_date — 1,461 records</li>
+                        <li>dim_location — 632 records</li>
+                        <li>dim_ship_mode — 4 records</li>
+                        <li>dim_order — 5,009 records</li>
+                    </ul>
+                </div>
+                <div class="analysis-card">
+                    <h3>Fact Tables</h3>
+                    <ul>
+                        <li>fact_sales — 9,994 records</li>
+                        <li>fact_returns — 296 distinct returned orders</li>
+                        <li>Surrogate keys in dimension tables</li>
+                        <li>Foreign-key relationships from fact tables</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Implementation</p>
+                <h2>ETL Process & Data Preparation</h2>
+            </div>
+            <div class="project-process">
+                <div class="process-item">
+                    <span>01</span>
+                    <div>
+                        <h3>Source Preparation</h3>
+                        <p>Prepared the source workbook data as CSV files for loading into MySQL.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span>02</span>
+                    <div>
+                        <h3>Staging Layer</h3>
+                        <p>Created stg_orders and stg_returns staging tables to hold source data before loading the warehouse tables.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span>03</span>
+                    <div>
+                        <h3>Transform & Load</h3>
+                        <p>Used INSERT ... SELECT statements to populate dimensions and fact tables, with a recursive CTE to generate the date dimension.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span>04</span>
+                    <div>
+                        <h3>Validation</h3>
+                        <p>Checked record counts and key relationships, and reviewed the handling of duplicates, missing values, and data types.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section project-section-light">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Data Quality</p>
+                <h2>Data Quality Decisions</h2>
+            </div>
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>Returns Handling</h3>
+                    <p>The source contains 800 return rows but only 296 distinct Order IDs. The warehouse retains one record per returned order.</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Product Identifiers</h3>
+                    <p>Thirty-two Product IDs were associated with two product names, so the product dimension uses a composite uniqueness rule on Product ID and Product Name.</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Missing & Inconsistent Values</h3>
+                    <p>Eleven missing postal codes were stored as NULL. Four-digit postal codes were preserved where leading zeros had been lost in the source.</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Data Types & Precision</h3>
+                    <p>Dates and numeric values were converted using functions such as STR_TO_DATE and CAST. DECIMAL(12,4) was used to manage floating-point noise in profit values.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">SQL Analytics</p>
+                <h2>Queries & Database Objects</h2>
+            </div>
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>Analytical Queries</h3>
+                    <ul>
+                        <li>16 business analysis queries</li>
+                        <li>Sales trends and year-over-year growth</li>
+                        <li>Profitability by product and sub-category</li>
+                        <li>Discount-band analysis</li>
+                        <li>Top customers and customer value tiers</li>
+                        <li>Return-rate analysis by region</li>
+                        <li>Subqueries and common table expressions</li>
+                    </ul>
+                </div>
+                <div class="analysis-card">
+                    <h3>Reusable SQL Objects</h3>
+                    <ul>
+                        <li>vw_monthly_kpis view</li>
+                        <li>vw_sales_detail view</li>
+                        <li>sp_kpi_summary stored procedure</li>
+                        <li>Four indexes</li>
+                        <li>Execution-plan review using EXPLAIN</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section project-section-light">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Results</p>
+                <h2>Selected Business Findings</h2>
+            </div>
+            <div class="project-overview-grid">
+                <div class="project-info-card">
+                    <h3>Sales & Profitability</h3>
+                    <p><strong>Total Sales:</strong> $2,297,200.86</p>
+                    <p><strong>Total Profit:</strong> $286,397.02</p>
+                    <p><strong>Profit Margin:</strong> 12.47%</p>
+                </div>
+                <div class="project-info-card">
+                    <h3>Business Scale</h3>
+                    <p><strong>Orders:</strong> 5,009</p>
+                    <p><strong>Customers:</strong> 793</p>
+                    <p><strong>High-value customers:</strong> 117, contributing 39.7% of sales</p>
+                </div>
+            </div>
+            <div class="analysis-grid" style="margin-top: 25px;">
+                <div class="analysis-card">
+                    <h3>Sales Growth</h3>
+                    <ul>
+                        <li>2017: -2.83% year-over-year</li>
+                        <li>2018: +29.47% year-over-year</li>
+                        <li>2019: +20.36% year-over-year</li>
+                    </ul>
+                </div>
+                <div class="analysis-card">
+                    <h3>Profitability Patterns</h3>
+                    <ul>
+                        <li>Discount bands above 20% were associated with negative margins.</li>
+                        <li>Tables, Bookcases, and Supplies were loss-making sub-categories.</li>
+                        <li>The top customer by sales, Sean Miller, had a negative total profit.</li>
+                    </ul>
+                </div>
+                <div class="analysis-card">
+                    <h3>Returns</h3>
+                    <p>The West region had an 11.73% return rate, compared with approximately 3% in the other regions.</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Performance Review</h3>
+                    <p>Execution plans were reviewed before and after indexing. The plans showed improvements such as index lookups and a covering-index access path; runtime differences were small on this dataset.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">My Contribution</p>
+                <h2>Development & Learning Approach</h2>
+            </div>
+            <div class="project-info-card">
+                <p>
+                    I made implementation and data-handling decisions, executed
+                    SQL statements in MySQL Workbench, reviewed and validated
+                    query results, troubleshot data-import and environment issues,
+                    refined the product-dimension uniqueness rule, and prepared
+                    the final project scripts and repository.
+                </p>
+                <p>
+                    AI assistance was used to generate and explain some SQL code.
+                    I worked through the statements in MySQL Workbench and
+                    validated the outputs as part of this hands-on learning project.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section project-section-light">
+        <div class="project-page-container">
+            <div class="project-section-header">
+                <p class="section-label">Repository</p>
+                <h2>Project Files</h2>
+            </div>
+            <div class="project-info-card">
+                <p>Explore the complete SQL script, database model, ERD, and project documentation in the GitHub repository.</p>
+                <p><a class="project-link" href="https://github.com/hazemhany114-ship-it/MySQL-Superstore-Data-Warehouse" target="_blank" rel="noopener noreferrer">Open GitHub Repository →</a></p>
+                <p><a class="project-link" href="https://github.com/hazemhany114-ship-it/MySQL-Superstore-Data-Warehouse/blob/main/Superstore.sql" target="_blank" rel="noopener noreferrer">View SQL Script →</a></p>
+                <p><a class="project-link" href="https://github.com/hazemhany114-ship-it/MySQL-Superstore-Data-Warehouse/blob/main/Superstore_Data_Warehouse.mwb" target="_blank" rel="noopener noreferrer">View MySQL Workbench Model →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-back">
+        <a href="index.html#projects">← Back to Projects</a>
+    </section>
+
+</body>
+</html>
